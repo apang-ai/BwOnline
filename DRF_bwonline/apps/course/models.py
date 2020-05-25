@@ -7,8 +7,6 @@ from organization.models import CourseOrg,Teacher
 from DjangoUeditor.models import UEditorField
 
 
-
-
 class Course(models.Model):
     '''课程'''
     DEGREE_CHOICES = (
@@ -21,7 +19,6 @@ class Course(models.Model):
     # detail = models.TextField("课程详情")
     detail = UEditorField(verbose_name=u'课程详情', width=600, height=300, imagePath="courses/ueditor/",
                           filePath="courses/ueditor/", default='')
-
 
     degree = models.CharField('难度',choices=DEGREE_CHOICES, max_length=2)
     learn_times = models.IntegerField("学习时长(分钟数)",default=0)
@@ -43,22 +40,22 @@ class Course(models.Model):
         verbose_name_plural = verbose_name
 
     def get_zj_nums(self):
-        #获取课程的章节数
+        # 获取课程的章节数
         return self.lesson_set.all().count()
     get_zj_nums.short_description = '章节数'   #在后台显示的名称
 
     def go_to(self):
         from django.utils.safestring import mark_safe
-        #mark_safe后就不会转义
+        # mark_safe后就不会转义
         return mark_safe("<a href='https://home.cnblogs.com/u/derek1184405959/'>跳转</a>")
     go_to.short_description = "跳转"
 
     def get_course_lesson(self):
-        #获取课程所有章节
+        # 获取课程所有章节
         return self.lesson_set.all()
 
     def get_learn_users(self):
-        #获取这门课程的学习用户
+        # 获取这门课程的学习用户
         return self.usercourse_set.all()[:5]
 
     def __str__(self):
