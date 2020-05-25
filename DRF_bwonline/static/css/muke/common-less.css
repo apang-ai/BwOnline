@@ -991,7 +991,7 @@ progress::-webkit-progress-value {
 .elevator .elevator-diaocha:hover{
   background-position: 0 -984px;
 }
-.elevator .elevator-app-box{
+.elevator .elevator-apps-box{
   position: absolute;
   width: 172px;
   height: 194px;
@@ -1000,12 +1000,12 @@ progress::-webkit-progress-value {
   .elevator-box-mixin;
   background: url(/static/img/common/elevator.png) no-repeat 0 -222px;
 }
-.elevator .elevator-app {
+.elevator .elevator-apps {
   background-position: 0 -550px;
 }
-.elevator .elevator-app:hover {
+.elevator .elevator-apps:hover {
   background-position: 0 -612px;
-  .elevator-app-box {
+  .elevator-apps-box {
     .elevator-box-hover-mixin;
   }
 }

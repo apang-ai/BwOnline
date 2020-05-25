@@ -2,13 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73305acf-bd61-41c2-9616-9a4cd8ca9847" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../bwOnline/bwOnline/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../bwOnline/bwOnline/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DRF_bwonline.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DRF_bwonline.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DRF_bwonline/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DRF_bwonline/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DRF_bwonline/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DRF_bwonline/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/muke/common-less.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/muke/common-less.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -19,10 +34,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Practical_test/freshshop" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\13059\Desktop\BwOnline\DRF_bwonline\apps\course" />
+      <recent name="C:\Users\13059\Desktop\BwOnline\DRF_bwonline\apps" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\13059\Desktop\BwOnline\DRF_bwonline\extra_apps" />
       <recent name="C:\Users\13059\Desktop\BwOnline\DRF_bwonline" />
     </key>
   </component>
@@ -73,7 +100,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590387684212</updated>
-      <workItem from="1590387685846" duration="304000" />
+      <workItem from="1590387685846" duration="626000" />
+      <workItem from="1590393220354" duration="4098000" />
     </task>
     <servers />
   </component>
@@ -85,7 +113,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
