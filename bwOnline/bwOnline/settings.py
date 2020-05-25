@@ -44,7 +44,10 @@ INSTALLED_APPS = [
     'organization',
     'operation',
     'xadmin',
-    'crispy_forms'
+    'crispy_forms',
+    'captcha',
+    'pure_pagination',
+    'DjangoUeditor',
 ]
 
 AUTH_USER_MODEL = 'users.UserProfile'
@@ -61,10 +64,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'bwOnline.urls'
 
+AUTHENTICATION_BACKENDS = (
+    'users.views.CustomBackend',
+)
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,6 +79,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 添加图片处理器，为了在课程列表中前面加上MEDIA_URL
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -142,3 +151,17 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+#静态文件
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# 设置上传文件的路径
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')   #指定根目录
+
+
+EMAIL_HOST = "smtp.qq.com"
+EMAIL_PORT = 25                            # 大多都是25；若使用SSL，端口号465或587
+EMAIL_HOST_USER = "1305999617@qq.com"      # 发送邮箱
+EMAIL_HOST_PASSWORD = "psbuquzbidzdbafc"   # 使用的是QQ的授权码，不是你的密码
+EMAILE_USE_TLS = True                      # 一定要是True，否则发不了
+EMAIL_FROM = '即在线教育<1305999617@qq.com>'  # 邮件发送人(邮件中所显示的发送人，和EMAIL_HOST_USER同)
