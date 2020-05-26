@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'xadmin',
     'crispy_forms',
-    'DjangoUeditor'
+    'DjangoUeditor',
+    'django_filters',
 ]
 
 #重载系统的用户，让UserProfile生效
@@ -149,3 +150,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # 设置上传文件的路径
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')   #指定根目录
+
+# REST_FRAMEWORK = {
+#     #分页
+#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+#     #每页显示的个数
+#     'PAGE_SIZE': 1,
+# }
