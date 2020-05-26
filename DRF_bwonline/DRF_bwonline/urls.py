@@ -23,13 +23,19 @@ import xadmin
 from django.urls import path, include, re_path
 from django.views.static import serve
 from DRF_bwonline.settings import MEDIA_ROOT
-from course.views import CourseViewSet, BannerCourseViewSet
+from course.views import CourseViewSet, BannerCourseViewSet, LessonViewSet, VideoViewSet, CourseResourceViewSet
 
 router = DefaultRouter()
 # 课程列表
 router.register(r'course', CourseViewSet, basename='course')
 # 首页轮播
 router.register(r'banners', BannerCourseViewSet, basename='banners')
+# 课程章节
+router.register(r'lesson', LessonViewSet, basename='lesson')
+# 章节列表
+router.register(r'video', VideoViewSet, basename='video')
+# 课程资源
+router.register(r'courseresource', CourseResourceViewSet, basename='courseresource')
 
 
 urlpatterns = [

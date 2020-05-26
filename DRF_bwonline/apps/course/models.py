@@ -88,6 +88,7 @@ class Lesson(models.Model):
     def __str__(self):
         return '《{0}》课程的章节 >> {1}'.format(self.course, self.name)
 
+
 class Video(models.Model):
     '''章节视频'''
     lesson = models.ForeignKey(Lesson, verbose_name="章节",on_delete=models.CASCADE)
@@ -105,6 +106,7 @@ class Video(models.Model):
 
 
 class CourseResource(models.Model):
+
     course = models.ForeignKey(Course, verbose_name="课程",on_delete=models.CASCADE)
     name = models.CharField("名称",max_length=100)
     download = models.FileField("资源文件",upload_to="course/resource/%Y/%m",max_length=100)
