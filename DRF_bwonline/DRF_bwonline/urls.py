@@ -24,6 +24,7 @@ from django.urls import path, include, re_path
 from django.views.static import serve
 from DRF_bwonline.settings import MEDIA_ROOT
 from course.views import CourseViewSet, BannerCourseViewSet, LessonViewSet, VideoViewSet, CourseResourceViewSet
+from organization.views import TeacherViewSet, CourserOrgViewSet, CityDictViewSet
 
 router = DefaultRouter()
 # 课程列表
@@ -36,7 +37,12 @@ router.register(r'lesson', LessonViewSet, basename='lesson')
 router.register(r'video', VideoViewSet, basename='video')
 # 课程资源
 router.register(r'courseresource', CourseResourceViewSet, basename='courseresource')
-
+# 城市列表
+router.register(r'city', CityDictViewSet, basename='city')
+# 老师列表
+router.register(r'teacher', TeacherViewSet, basename='teacher')
+# 培训机构列表
+router.register(r'courseorg', CourserOrgViewSet, basename='courseorg')
 
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),

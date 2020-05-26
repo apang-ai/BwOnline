@@ -12,7 +12,7 @@ class CityDict(models.Model):
 
     class Meta:
         verbose_name = '城市'
-        verbose_name_plural= verbose_name
+        verbose_name_plural = verbose_name
 
 
 class CourseOrg(models.Model):
