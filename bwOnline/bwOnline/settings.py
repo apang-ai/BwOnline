@@ -15,8 +15,8 @@ import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0,os.path.join(BASE_DIR, 'apps'))
-sys.path.insert(0,os.path.join(BASE_DIR, 'extra_apps'))
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -152,16 +152,21 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 #静态文件
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+# STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 
 # 设置上传文件的路径
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')   #指定根目录
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')   #指定根目录
 
 
 EMAIL_HOST = "smtp.qq.com"
 EMAIL_PORT = 25                            # 大多都是25；若使用SSL，端口号465或587
 EMAIL_HOST_USER = "1305999617@qq.com"      # 发送邮箱
-EMAIL_HOST_PASSWORD = "psbuquzbidzdbafc"   # 使用的是QQ的授权码，不是你的密码
-EMAILE_USE_TLS = True                      # 一定要是True，否则发不了
+# EMAIL_HOST_PASSWORD = "psbuquzbidzdbafc"   # 使用的是QQ的授权码，不是你的密码
+EMAIL_HOST_PASSWORD = "kgitfewldpzwficb"   # 使用的是QQ的授权码，不是你的密码
+EMAIL_USE_TLS = True                     # 一定要是True，否则发不了
 EMAIL_FROM = '即在线教育<1305999617@qq.com>'  # 邮件发送人(邮件中所显示的发送人，和EMAIL_HOST_USER同)
+
